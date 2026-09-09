@@ -1,4 +1,6 @@
+Instagram: 439.0.0.37.89  
 MusicMorphe: 9.15.51  
+Twitter: 12.19.1-release.0  
 YouTube: 20.51.39  
 YouTubeMorphe: 21.07.247  
 
