@@ -9,6 +9,11 @@ jobs:
     permissions: write-all
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/setup-java@v5
+        with:
+          distribution: "zulu"
+          java-version: "21"
+
       - name: Checkout
         uses: actions/checkout@v6
         with:
@@ -20,11 +25,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          LATEST=$(gh api repos/MorpheApp/morphe-patches/releases --jq '[.[] | select(.prerelease == false)] | sort_by(.created_at) | reverse | .[0].tag_name')
+          LATEST=$(gh api repos/anddea/revanced-patches/releases --jq '[.[] | select(.prerelease == false)] | sort_by(.created_at) | reverse | .[0].tag_name')
           echo "Latest stable patches: $LATEST"
           LAST=""
           if git checkout origin/update build.md 2>/dev/null; then
-            LAST=$(grep -oP 'Patches: MorpheApp/patches-\K.*?(?=\.mpp)' build.md | head -1)
+            LAST=$(grep -oP 'Patches: anddea/patches-\K.*?(?=\.mpp)' build.md | head -1)
             if [ -n "$LAST" ]; then
               [[ $LAST != v* ]] && LAST="v$LAST"
               echo "Last built: $LAST"
@@ -42,19 +47,17 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          PATCHES_BUILD="${{ steps.check_patches.outputs.SHOULD_BUILD }}"
-          
-          if [ "$PATCHES_BUILD" = "1" ]; then
+          if ! git checkout origin/update build.md; then
+            echo "first time building!"
             echo "SHOULD_BUILD=1" >> $GITHUB_OUTPUT
-          elif git checkout origin/update build.md 2>/dev/null; then
+          else
             UPDATE_CFG=$(./build.sh config.toml --config-update)
-            if [ -n "$UPDATE_CFG" ]; then
+            if [ "$UPDATE_CFG" ]; then
+              echo "'$UPDATE_CFG'"
               echo "SHOULD_BUILD=1" >> $GITHUB_OUTPUT
             else
               echo "SHOULD_BUILD=0" >> $GITHUB_OUTPUT
             fi
-          else
-            echo "SHOULD_BUILD=1" >> $GITHUB_OUTPUT
           fi
 
       - name: Clear older runs
