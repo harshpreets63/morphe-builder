@@ -2,7 +2,7 @@ Instagram: 439.0.0.37.89
 Music: 9.15.51  
 MusicMorphe: 9.15.51  
 Twitter: 12.19.1-release.0  
-YouTube: 21.16.256  
+YouTube: 20.51.39  
 YouTubeMorphe: 21.16.256  
 
 Install [MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) for non-root YouTube and YT Music APKs  
