@@ -25,3 +25,4 @@ riplib = true
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"
+direct-dlurl = "https://d.apkpure.com/b/APK/com.google.android.youtube?versionCode=1561063732"
