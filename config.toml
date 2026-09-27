@@ -41,7 +41,6 @@ patcher-args = """\
   """
 patches-source = "anddea/revanced-patches"
 patches-version = "dev"
-version = "auto"
 rv-brand = "anddea ReVanced"
 riplib = true  
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
