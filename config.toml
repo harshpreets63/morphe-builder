@@ -41,7 +41,6 @@ patcher-args = """\
   """
 patches-source = "anddea/revanced-patches"
 patches-version = "dev"
-version = "20.51.39"
 rv-brand = "anddea ReVanced"
 riplib = true  
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
@@ -68,14 +67,14 @@ archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.a
 
 [Instagram]
 #uptodown-dlurl = "https://instagram.en.uptodown.com/android"
-direct-dlurl = "https://cloud.doley.qzz.io/f/jPU2/com.instagram.android-439.0.0.37.89-arm64-v8a.apkm"
+direct-dlurl = "https://cloud.doley.qzz.io/f/WMs7/com.instagram.android-447.0.0.55.81-arm64-v8a.apkm"
 #dpi = "480-640dpi"
 arch = "arm64-v8a"
 patches-source = "crimera/piko"
 patches-version = "dev"
 cli-source = "MorpheApp/morphe-desktop"
 rv-brand = "Piko"
-version = "439.0.0.37.89"
+version = "447.0.0.55.81"
 
 
 [Twitter]
