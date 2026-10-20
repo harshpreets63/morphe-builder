@@ -1,6 +1,6 @@
 {
-  "version": "v21.20.405 (patches dev.7.mpp)",
-  "versionCode": 48,
-  "zipUrl": "https://github.com/harshpreets63/morphe-builder/releases/download/48/youtube-morphe-module-v21.20.405-all.zip",
+  "version": "v21.20.405 (patches dev.13.mpp)",
+  "versionCode": 49,
+  "zipUrl": "https://github.com/harshpreets63/morphe-builder/releases/download/49/youtube-morphe-module-v21.20.405-all.zip",
   "changelog": "https://raw.githubusercontent.com/harshpreets63/morphe-builder/update/build.md"
 }
